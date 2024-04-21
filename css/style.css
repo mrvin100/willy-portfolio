@@ -1,0 +1,281 @@
+/* custom css file made by JeanDoe */
+
+:root{
+	--main-clr: #0a65ff;
+	--main-clr-alt: #113587;
+	--white: #fff;
+	--light-blue: #d1e1f1;
+	--black: #000;
+	--light-clr: #bbb;
+/*	--light-bg: #d1e1f1;*/
+	--light-bg: #040a24;
+	--red: #ff4754;
+	--blue: #1687a7;
+/*	body fonts */
+	--body-font: 'Poppins Regular', Arial, sans-serif;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	text-decoration: none;
+}
+::selection{
+	background: var(--main-clr);
+	color: var(--white);
+}
+
+html{
+	font-size: 90%;
+}
+
+body{
+	background: var(--light-bg);
+/*	font-family: var(--body-font);*/
+	font-weight: 400;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+
+/* header section starts */
+
+.header{
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+	background: transparent;
+	transition: all .3s ease;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	color: var(--white);
+}
+
+.header.active{
+	box-shadow: 0 -1px 4px rgba(255,255,255, .15);
+	background: var(--light-blue);
+	border-bottom: 1px solid rgba(255,255,255,.5);
+	color: var(--light-bg);
+}
+
+.header .logo{
+	height: 3rem;
+	width: 3rem;
+	object-fit: contain;
+	border-radius: 50%;
+	border: 1px solid var(--light-clr);
+}
+
+.header .navbar a{
+	margin: 1rem;
+	text-transform: capitalize;
+}
+.header .navbar a:hover{
+	color: var(--main-clr);
+}
+
+#menu-btn{
+	color: var(--main-clr);
+	cursor: pointer;
+	font-size: 1.3rem;
+	padding: .5rem .7rem;
+	background: var(--light-bg);
+	border-radius: .25rem;
+	display: none;
+}
+
+#close-btn:hover,
+#menu-btn:hover{
+	color: var(--black);
+}
+
+#close-btn{
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	font-size: 1.2rem;
+	cursor: pointer;
+	color: var(--main-clr);
+	display: none;
+	padding: .5rem .7rem;
+	border-radius: .5rem;
+	background: var(--light-bg);
+}
+
+/* Home section starts */
+.body-about{
+/*
+	background: #000 url('../img/bg4.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+*/
+}
+
+.home{
+/*	background: var(--white);*/
+}
+.home .banner{
+	align-content: center;
+	background: url('../img/bg.png') no-repeat center;
+	background-position: top;
+	background-size: cover;
+	height: 100vh;
+	position: relative;
+}
+
+.home .banner div{
+	position: absolute;
+	left: 15%;
+	top: 40%;
+}
+.home .banner h2{
+	font-size: 2rem;
+	color: var(--white);
+	line-height: 2;
+	letter-spacing: .1rem;
+	text-transform: uppercase;
+}
+
+.home .banner h2 span{
+	background: var(--main-clr);
+	color: var(--white);
+}
+
+.home .banner img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.home .banner p{
+	color: var(--white);
+	font-size: 1.2rem;
+}
+
+/* About aside starts */
+
+.home .about{
+	padding: 1rem;
+	background: var(--light-blue);
+}
+
+.about h3{
+	font-size: 1.3rem;
+	color: var(--black);
+	text-align: center;
+	margin: 2rem;
+}
+
+.about .descriptions{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 2rem;
+	align-content: center;
+}
+.descriptions .rounder{
+	display: inline-block;
+	height: 5px;
+	width: 13px;
+	border-radius: .25rem;
+	background: var(--black);
+}
+.descriptions .line{
+	display: block;
+	height: 100%;
+	width: 3px;
+	background: var(--black);
+}
+.descriptions div{
+	height: 100%;
+	width: 100%;
+}
+.descriptions p{
+	padding: 1rem;
+	background: var(--white);
+	border-radius: .25rem;
+	letter-spacing: .02rem;
+	font-size: .938rem;
+	text-align: right;
+	max-width: 15rem;
+	float: right;
+	color: var(--light-bg);
+	box-shadow: 0 -1px 4px rgba(255,255,255, .15);
+}
+
+.description:nth-child(2) p,
+.description:nth-child(4) p{
+	text-align: left;
+	margin-top: 1.5rem;
+	float: left;
+}
+.description:nth-child(1) p{
+	background: var(--light-bg);
+	color: var(--white);
+}
+
+.description{
+	position: relative;
+}
+
+.description:nth-child(1) .rounder,
+.description:nth-child(3) .rounder,
+.description:nth-child(1) .line,
+.description:nth-child(3) .line{
+	position: absolute;
+	right: -.9rem;
+}
+.description:nth-child(2) .rounder,
+.description:nth-child(4) .rounder,
+.description:nth-child(2) .line,
+.description:nth-child(4) .line{
+	position: absolute;
+	left: -.9rem;
+}
+
+.description:nth-child(5) .rounder{
+	position: absolute;
+	right: -.9rem;
+	top: -.3rem;
+}
+
+
+
+
+@media screen and (max-width: 768px){
+	
+	.header .navbar{
+		display: none;
+		position: absolute;
+		top: 120%;
+		background: var(--black);
+		left: 50%;
+		transform: translateX(-50%);
+		padding: 1rem .5rem;
+		border-radius: .25rem;
+		max-width: 20rem;
+		width: 100%;
+		box-shadow: var(--box-shadow);
+		z-index: 1000;
+	}
+	.header .navbar.active{
+		display: block;
+	}
+	.header .navbar a{
+		display: block;
+	}
+	#menu-btn{
+		display: block;
+	}
+	#close-btn{
+		display: block;
+	}
+}
+
+
+
+
